@@ -26,7 +26,7 @@ int main() {
 		i++;
 	}
 	mean = summed/N;
-	std::cout.precision(16);
+	std::cout.precision(8);
 	std::cout << mean << std::endl;
 	
 	while (fin2 >> b && j<234)
@@ -35,7 +35,7 @@ int main() {
 		j++;
 	}
 	var = summed_diff_sq/N;
-	std::cout.precision(16);
+	std::cout.precision(8);
 	std::cout << var << std::endl;
 	
 	std_dev = sqrt(var);
