@@ -43,9 +43,9 @@ double std_dev;
 			if (c == 9)
 			{
 				mean = summed/N;
-				std::cout.precision(16);
-				std::cout << "mean: " << mean << std::endl;
-				fout1.precision(16);
+				std::cout.precision(8);
+				//std::cout << "mean: " << mean << std::endl;
+				fout1.precision(8);
 				fout1 << mean << std::endl;
 				summed=0;
 				c=0;
@@ -66,11 +66,11 @@ double std_dev;
 			{
 				var = summed_diff_sq/N;
 				var_bessel = var*(N/(N-1));	// with Bessel's correction
-				std::cout.precision(16);
-				std::cout << "variance: " << var << std::endl;
-				fout2.precision(16);
+				std::cout.precision(8);
+				//std::cout << "variance: " << var << std::endl;
+				fout2.precision(8);
 				fout2 << var << std::endl;
-				fout3.precision(16);
+				fout3.precision(8);
 				fout3 << var_bessel << std::endl;
 				summed_diff_sq=0;
 				c=0;
