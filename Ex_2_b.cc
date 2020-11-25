@@ -56,7 +56,7 @@ int main() {
 		//fout << summed << std::endl;
 		k++;
 	}
-	mean_2_Bessel = summed_3/N;
+	mean_2_Bessel = summed_3/(N-1);
 	std::cout.precision(16);
 	std::cout << "mean of the 26 variances with Bessel's correction: " << mean_2_Bessel<< std::endl;
 	

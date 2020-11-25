@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-
+#include <vector>
 
 int main() {
 
@@ -14,9 +14,12 @@ double summed_diff_sq;
 double b;
 int j;
 int c;
+int k1;
+int k2;
 double var;
 double var_bessel;
 double std_dev;
+std::vector<double> mean_vec(26);
 
 
 	//for(int c = 0; c<26; ++c) 
@@ -31,6 +34,7 @@ double std_dev;
 		summed_diff_sq=0;
 		j=0;
 		c=0;
+		k1=0;
 		
 		while (fin >> a && i<234)
 		{
@@ -43,22 +47,25 @@ double std_dev;
 			if (c == 9)
 			{
 				mean = summed/N;
+				mean_vec[k1] = mean;
 				std::cout.precision(8);
 				//std::cout << "mean: " << mean << std::endl;
 				fout1.precision(8);
 				fout1 << mean << std::endl;
 				summed=0;
 				c=0;
+				k1++;
 			}
 
 			i++;
 		}
 		
 		c=0;
+		k2=0;
 	
 		while (fin2 >> b && j<234)
 		{
-			summed_diff_sq = (b - mean)*(b - mean) + summed_diff_sq;
+			summed_diff_sq = (b - mean_vec[k2])*(b - mean_vec[k2]) + summed_diff_sq;
 			c++;
 			
 			// should produce an output of 26 numbers
@@ -74,6 +81,7 @@ double std_dev;
 				fout3 << var_bessel << std::endl;
 				summed_diff_sq=0;
 				c=0;
+				k2++;
 			}
 			
 			j++;
