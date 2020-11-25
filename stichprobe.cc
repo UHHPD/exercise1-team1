@@ -27,7 +27,7 @@ int main() {
 	}
 	mean = summed/N;
 	std::cout.precision(16);
-	std::cout << "mean: " << mean << std::endl;
+	std::cout << mean << std::endl;
 	
 	while (fin2 >> b && j<234)
 	{
@@ -36,10 +36,10 @@ int main() {
 	}
 	var = summed_diff_sq/N;
 	std::cout.precision(16);
-	std::cout << "variance: " << var << std::endl;
+	std::cout << var << std::endl;
 	
 	std_dev = sqrt(var);
-	std::cout << "standard deviation: " << std_dev << std::endl;
+	std::cout << std_dev << std::endl;
 	
 	fin.close();
 	fin2.close();
